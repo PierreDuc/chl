@@ -2,7 +2,12 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "types": []
+    "types": ["node"],
+    "paths": {
+      "ng-event-options/*": [
+        "projects/ng-event-options/src/lib/*"
+      ]
+    }
   },
   "exclude": [
     "test.ts",

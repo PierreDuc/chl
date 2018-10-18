@@ -121,6 +121,41 @@
           }
         }
       }
+    },
+    "ng-event-options": {
+      "root": "projects/ng-event-options",
+      "sourceRoot": "projects/ng-event-options/src",
+      "projectType": "library",
+      "prefix": "chl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-event-options/tsconfig.lib.json",
+            "project": "projects/ng-event-options/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-event-options/src/test.ts",
+            "tsConfig": "projects/ng-event-options/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-event-options/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-event-options/tsconfig.lib.json",
+              "projects/ng-event-options/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "chl"

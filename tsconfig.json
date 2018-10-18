@@ -16,6 +16,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-event-options": [
+        "dist/ng-event-options"
+      ],
+      "ng-event-options/*": [
+        "dist/ng-event-options/*"
+      ]
+    }
   }
 }
